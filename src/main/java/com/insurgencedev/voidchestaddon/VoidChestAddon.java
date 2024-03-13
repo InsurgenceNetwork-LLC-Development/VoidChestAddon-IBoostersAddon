@@ -5,7 +5,7 @@ import org.insurgencedev.insurgenceboosters.api.addon.IBoostersAddon;
 import org.insurgencedev.insurgenceboosters.api.addon.InsurgenceBoostersAddon;
 import org.insurgencedev.insurgenceboosters.libs.fo.Common;
 
-@IBoostersAddon(name = "VoidChestAddon", version = "1.0.1", author = "InsurgenceDev", description = "VoidChest support")
+@IBoostersAddon(name = "VoidChestAddon", version = "1.0.2", author = "InsurgenceDev", description = "VoidChest support")
 public class VoidChestAddon extends InsurgenceBoostersAddon {
 
     @Override
