@@ -6,13 +6,25 @@
 
     <groupId>org.insurgencedev</groupId>
     <artifactId>VoidChestAddon</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>georgev22-repository</id>
+            <name>GeorgeV22 Repository</name>
+            <url>https://repo.georgev22.com/releases</url>
+        </repository>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
@@ -23,11 +35,10 @@
             <systemPath>${project.basedir}/src/main/libs/IBoosters-1.0.1-API.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>org.void</groupId>
-            <artifactId>VoidChest</artifactId>
-            <version>LATEST</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/libs/voidchest2-2.3.1.jar</systemPath>
+            <groupId>com.georgev22.voidchest-shade</groupId>
+            <artifactId>voidchestapi-shade</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
