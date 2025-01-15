@@ -1,6 +1,7 @@
 package com.insurgencedev.voidchestaddon.listeners;
 
 import com.georgev22.voidchest.api.VoidChestAPI;
+import com.georgev22.voidchest.api.storage.data.IPlayerData;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.insurgencedev.insurgenceboosters.api.IBoosterAPI;
@@ -30,10 +31,10 @@ public final class VoidChestEventListeners implements Listener {
         }, () -> null);
 
         if (totalMulti[0] > 0) {
-            VoidChestAPI.getInstance().playerManager().getEntity(uuid).thenAccept(data -> {
-                final long result = Instant.now().toEpochMilli() + (1000 * event.getBoosterData().getTimeLeft());
-                data.booster().boostTime(result);
-                data.booster().booster(totalMulti[0]);
-            });         }
+            IPlayerData playerData = VoidChestAPI.getInstance().playerManager().getEntity(uuid, true);
+            final long result = Instant.now().toEpochMilli() + (1000 * event.getBoosterData().getTimeLeft());
+            playerData.booster().boostTime(result);
+            playerData.booster().booster(totalMulti[0]);
+        }
     }
 }
